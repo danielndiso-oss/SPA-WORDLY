@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WORDLY SEARCH</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="scripts.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <h1 class="brand" id="app-brand">Wordly Dictionary Search Page</h1>
+        </header>
+    </nav>
+
+    <section class="main">
+        <div class="header">
+            <h2 class="title">Find Your Word Meaning</h2>
+            <p class="text-black text-2xl ">It's definitions, pronunciations, and synonyms.</p>
+        </div>
+
+        <div class="search-card">
+            <form id="search-form" class="search-form">
+                <input type="text" id="search-input" placeholder="Enter a word..." class="search-input">
+                <button type="submit" id="search-button" class="search-button">Search</button>
+            </form>
+        </div>
+
+        <p id="status" class="status" aria-live="polite"></p>
+
+        <article id="results-container" class="results-card">
+            <header class="results-header">
+                <h3 id="word" class="word"></h3>
+                <div class="results-meta">
+                    <span id="phonetic" class="phonetic"></span>
+                    <button id="play-btn" class="play-btn bg-cyan-500 rounded-full" aria-label="Play pronunciation">Play</button>
+                    <audio id="audio" hidden></audio>
+                </div>
+            </header>
+            <div class="results-body">
+                <div class="section">
+                    <h4 class="section-title font-sans font-bold text-black text-2xl">Meaning</h4>
+                    <p id="definition" class="definition"></p>
+                </div>
+                <div class="section">
+                    <h4 class="section-title ont-sans font-bold text-black text-2xl">Synonyms</h4>
+                    <ul id="synonyms" class="synonyms"></ul>
+                </div>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
